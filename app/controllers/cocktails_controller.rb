@@ -10,6 +10,7 @@ class CocktailsController < ApplicationController
 
   def create
     @cocktail = Cocktail.create(cocktail_params)
+    redirect_to cocktails_path
   end
 
   def new

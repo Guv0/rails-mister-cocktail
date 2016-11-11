@@ -3,47 +3,92 @@
 @import "badges";
 
 .btn-g {
-  color: #24524E;
-  border: 1px solid #24524E;
-  padding: 10px 15px;
+  color: white;
+  border: 1px solid #E4D1CA;
+  padding: 5px 25px;
   border-radius: 5px;
   font-weight: lighter;
   opacity: 0.6;
+  width: 450px;
+}
+
+.btn-g-3 {
+  color: #545454;
+  border: 2px solid #545454;
+  padding: 5px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  opacity: 0.6;
+  width: 160px;
+}
+
+.btn-g-3:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: #9AAD52;
+  border-color: #9AAD52;
 }
 
 .btn-g:hover {
   opacity: 1;
   text-decoration: none;
-  color: #999999;
+  color: #9AAD52;
+  border-color: #9AAD52;
+}
+
+.btn-g-2 {
+  color: white;
+  border: 1px solid #E4D1CA;
+  padding: 5px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  opacity: 0.6;
+  width: 450px;
+}
+
+.btn-g-2:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: #9AAD52;
+  border-color: #9AAD52;
+}
+
+.btn-delete {
+  color: #9AAD52;
+}
+
+.list-inline {
+  font-size: 15px;
+  text-align: right;
+  padding-right: 240px;
 }
 
 .banner {
   color: white;
-  text-align: center;
   height: 100vh;
   background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .banner h1 {
   font-size: 50px;
   font-weight: bold;
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+  text-align: right;
+  padding-top: 160px;
+  padding-right: 150px;
+  padding-bottom: 30px;
 }
 
 .banner p {
-  font-size: 20px;
-  font-weight: lighter;
-  color: rgba(255, 255, 255, 0.7);
   margin-bottom: 20px;
+  margin-top: 40px;
+  text-align: right;
+  padding: 10px;
+  padding-right: 300px;
 }
 
-.card-cocktail {
-  padding: 20px;
-  margin: 20px;
-  height: 100px;
-  width: 200px;
+.form {
   position: relative;
+  top: 30px;
 }
+

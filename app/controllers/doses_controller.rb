@@ -2,8 +2,6 @@ class DosesController < ApplicationController
   before_action :find_cocktail, only: [:index, :show, :create, :new]
   before_action :find_dose, only: [:destroy]
 
-
-
   def create
     @dose = Dose.new(dose_params)
     @dose.cocktail = @cocktail
@@ -38,6 +36,6 @@ class DosesController < ApplicationController
   end
 
   def dose_params
-    params.require(:dose).permit(:cocktail_id, :description, :ingredient_id)
+    params.require(:dose).permit(:description, :ingredient_id)
   end
 end

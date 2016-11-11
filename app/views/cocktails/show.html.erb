@@ -1,16 +1,28 @@
-<h1><%= @cocktail.name %></h1>
-<h4>Ingredients:</h4>
 
+  <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.6) 50%), url('https://static.pexels.com/photos/4295/black-and-white-alcohol-bar-drinks.jpg');">
+    <div class="banner-content">
+      <h1><%= @cocktail.name %></h1>
 
+      <ul>
+        <% @cocktail.doses.each do |dose| %>
+        <ul class='list-inline'><li><%= dose.ingredient.name %> - <%= dose.description %></li>
+        <%= link_to "Delete", dose_path(dose), method: :delete %></ul>
+        <% end %>
+        <div class="form">
+         <div class="container">
+          <div class="row">
+            <div class="col-xs-3 col-xs-offset-7">
+              <%= simple_form_for [@cocktail, @dose] do |d| %>
+                <%= d.input :ingredient_id, collection: Ingredient.all %>
+                <%= d.input :description, placeholder: '20ml' %>
+                <%= d.submit %>
+              <%end%>
+            </div>
+          </div>
+         </div>
+        </div>
+      </ul>
 
-<ul>
-  <% @cocktail.doses.each do |dose| %>
-  <li><%= dose.ingredient.name %> - <%= dose.description %></li>
-  <%= link_to "Delete", dose_path(dose), method: :delete, class: "btn-medium" %>
-  <% end %>
-</ul>
-
-<%= link_to "Add dose", new_cocktail_dose_path(@cocktail), class: "btn-medium" %>
-
-
-<%= link_to "Return to cocktails", cocktails_path(@cocktail), class: "btn-medium" %>
+      <p><%= link_to "Return to cocktails", cocktails_path(@cocktail), class: "btn-g" %></p>
+    </div>
+  </div>

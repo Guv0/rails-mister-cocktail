@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   root "cocktails#index"
   resources :cocktails, except: [:edit, :update, :destroy] do
     resources :doses, only: [:new, :create]

@@ -7,6 +7,7 @@
         <%= simple_form_for [@cocktail, @dose] do |d| %>
           <%= d.input :ingredient_id, collection: Ingredient.all %>
           <%= d.input :description %>
+
           <%= d.submit %>
           <%end%>
       </div>
